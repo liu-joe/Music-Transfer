@@ -34,5 +34,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>To add songs to the library</string>
 </dict>
 </plist>
