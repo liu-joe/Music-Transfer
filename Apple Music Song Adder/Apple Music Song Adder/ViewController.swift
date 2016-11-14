@@ -25,6 +25,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestAuth()
+        
+        // Using iTunes search API to return the top result of a query
+        iTunesConnection.getTrackIDForString(searchString: "closer", completionHandler: { (trackID: String, trackName: String, artistName: String) -> () in
+            print("Adding Track \(trackID): \(trackName) by \(artistName)")
+        })
+        
+        spotifyConnection.getAllTracks()
+        
+    }
+    
+    func requestAuth() -> Void {
         SKCloudServiceController.requestAuthorization { (status) in
             // create the alert
             let alert = UIAlertController(title: String(status.rawValue), message: String(status.rawValue), preferredStyle: UIAlertControllerStyle.alert)
@@ -35,27 +47,26 @@ class ViewController: UIViewController {
             // show the alert
             self.present(alert, animated: true, completion: nil)
         }
-        
-        
-        
-        
-        iTunesConnection.getTrackIDForString(searchString: "closer", completionHandler: { (trackID: String, trackName: String, artistName: String) -> () in
-            print("Adding Track \(trackID): \(trackName) by \(artistName)")
-        })
-        
-        query = MPMediaQuery.artists()
+    }
+    
+    func addToLibrary(trackID: String) -> Void {
+        mediaLibrary.addItem(withProductID: "255991760")
+    }
+    
+    func playSong(trackID: String) -> Void {
+        player.setQueueWithStoreIDs(["1135647629"])
+        player.play()
+    }
+    
+    func printCurrentLibrary() -> Void {
+        query = MPMediaQuery.albums()
         collection = query!.collections
         
-        for idx in 0...collection!.count - 1 {
+        for idx in 0..<collection!.count {
             for idx2 in 0...collection![idx].items.count - 1 {
                 print(String(describing: collection![idx].items[idx2].persistentID))
             }
         }
-        
-//        player.setQueueWithStoreIDs(["1135647629"])
-//        player.play()
-        
-        //mediaLibrary.addItem(withProductID: "255991760")
     }
 
     override func didReceiveMemoryWarning() {
