@@ -8,12 +8,19 @@
 
 import UIKit
 import StoreKit
+import MediaPlayer
 
 class ViewController: UIViewController {
 
     @IBOutlet var testLabel: UILabel!
     var controller: SKCloudServiceController!
     var status: SKCloudServiceAuthorizationStatus!
+    
+    let mediaLibrary = MPMediaLibrary()
+    var query: MPMediaQuery!
+    var collection: [MPMediaItemCollection]!
+    
+    let player = MPMusicPlayerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +37,25 @@ class ViewController: UIViewController {
         }
         
         
+        
+        
+        iTunesConnection.getTrackIDForString(searchString: "closer", completionHandler: { (trackID: String, trackName: String, artistName: String) -> () in
+            print("Adding Track \(trackID): \(trackName) by \(artistName)")
+        })
+        
+        query = MPMediaQuery.artists()
+        collection = query!.collections
+        
+        for idx in 0...collection!.count - 1 {
+            for idx2 in 0...collection![idx].items.count - 1 {
+                print(String(describing: collection![idx].items[idx2].persistentID))
+            }
+        }
+        
+//        player.setQueueWithStoreIDs(["1135647629"])
+//        player.play()
+        
+        //mediaLibrary.addItem(withProductID: "255991760")
     }
 
     override func didReceiveMemoryWarning() {

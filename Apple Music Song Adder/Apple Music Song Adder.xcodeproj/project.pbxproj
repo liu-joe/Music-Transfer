@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F531FB5E1DD9ADFE009BB8A1 /* iTunesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531FB5D1DD9ADFE009BB8A1 /* iTunesConnection.swift */; };
 		F56398D81DD82C44003B40D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56398D71DD82C44003B40D9 /* AppDelegate.swift */; };
 		F56398DA1DD82C44003B40D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56398D91DD82C44003B40D9 /* ViewController.swift */; };
 		F56398DD1DD82C44003B40D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56398DB1DD82C44003B40D9 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F531FB5D1DD9ADFE009BB8A1 /* iTunesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesConnection.swift; sourceTree = "<group>"; };
 		F56398D41DD82C44003B40D9 /* Apple Music Song Adder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Music Song Adder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56398D71DD82C44003B40D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F56398D91DD82C44003B40D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				F56398D71DD82C44003B40D9 /* AppDelegate.swift */,
 				F56398D91DD82C44003B40D9 /* ViewController.swift */,
+				F531FB5D1DD9ADFE009BB8A1 /* iTunesConnection.swift */,
 				F56398DB1DD82C44003B40D9 /* Main.storyboard */,
 				F56398DE1DD82C44003B40D9 /* Assets.xcassets */,
 				F56398E01DD82C44003B40D9 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F531FB5E1DD9ADFE009BB8A1 /* iTunesConnection.swift in Sources */,
 				F56398DA1DD82C44003B40D9 /* ViewController.swift in Sources */,
 				F56398D81DD82C44003B40D9 /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +304,7 @@
 				F56398E81DD82C44003B40D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
