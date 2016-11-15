@@ -66,9 +66,6 @@ class ViewController: UIViewController {
             print("Adding Track \(trackID): \(trackName) by \(artistName)")
         })
         
-        
-        
-        
     }
     
     func updateAfterFirstLogin () {

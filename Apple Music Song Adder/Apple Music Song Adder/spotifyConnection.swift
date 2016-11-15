@@ -11,8 +11,16 @@ import Alamofire
 
 class spotifyConnection: NSObject {
 
+    typealias JSON = [String: AnyObject]
+    
     class func getAllTracks() {
         
+        getTracks(offset: 0, completionHandler: {(total: NSNumber, songList: NSArray) -> () in
+            print("total songs: \(total)")
+        })
+    }
+    
+    class func getTracks(offset: NSNumber, completionHandler:@escaping (NSNumber, NSArray)->()) {
         var token: String = ""
         
         let userDefaults = UserDefaults.standard
@@ -30,18 +38,29 @@ class spotifyConnection: NSObject {
             "Authorization": "Bearer \(token)",
             "Accept": "application/json"
         ]
-        typealias JSON = [String: AnyObject]
+        
         
         Alamofire.request(url, headers: headers).responseJSON(completionHandler: { response in
             do {
                 let readableJSON = try JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! JSON
-                print(readableJSON)
                 
-                print(String(describing: readableJSON["total"]!))
+                let trackList: NSArray = readableJSON["items"] as! NSArray
+                
+                let returnArray: NSArray = []
+                
+                print(readableJSON["total"]! as! NSNumber)
+            
+                for idx in 0..<trackList.count {
+                    let item: JSON = trackList[idx] as! JSON
+                    let track: JSON = item["track"] as! JSON
+                    let trackName: String = track["name"] as! String
+                    
+                    
+                    print(trackName)
+                }
             } catch {
                 print(error)
             }
         })
-        
     }
 }
