@@ -28,10 +28,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-l2-KC1">
+                                <rect key="frame" x="65" y="300" width="244" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="loginButton"/>
+                                <connections>
+                                    <action selector="loginWithSpotify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2L2-KG-zQy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhP-qb-DSA">
+                                <rect key="frame" x="164" y="455" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="getLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcC-O1-NyR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="getLibrary" destination="vhP-qb-DSA" id="Aaf-Uv-Rvb"/>
+                        <outlet property="loginButton" destination="kbx-l2-KC1" id="hao-fR-zER"/>
                         <outlet property="testLabel" destination="M1m-p7-VLA" id="gmj-jJ-ZZn"/>
                     </connections>
                 </viewController>
@@ -40,4 +58,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loginButton" width="244" height="44"/>
+    </resources>
 </document>

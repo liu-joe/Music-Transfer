@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67AE744A064E58373AD10C6C /* Pods_Apple_Music_Song_Adder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8994D55F07AA7A665361A5F /* Pods_Apple_Music_Song_Adder.framework */; };
 		F531FB5E1DD9ADFE009BB8A1 /* iTunesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531FB5D1DD9ADFE009BB8A1 /* iTunesConnection.swift */; };
 		F56398D81DD82C44003B40D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56398D71DD82C44003B40D9 /* AppDelegate.swift */; };
 		F56398DA1DD82C44003B40D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56398D91DD82C44003B40D9 /* ViewController.swift */; };
 		F56398DD1DD82C44003B40D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56398DB1DD82C44003B40D9 /* Main.storyboard */; };
 		F56398DF1DD82C44003B40D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56398DE1DD82C44003B40D9 /* Assets.xcassets */; };
 		F56398E21DD82C44003B40D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56398E01DD82C44003B40D9 /* LaunchScreen.storyboard */; };
+		F56DCA831DDA73180037597E /* spotifyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCA821DDA73180037597E /* spotifyConnection.swift */; };
+		F56DCA851DDA788A0037597E /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56DCA841DDA788A0037597E /* SpotifyAuthentication.framework */; };
+		F56DCA871DDA79460037597E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56DCA861DDA79460037597E /* AVFoundation.framework */; };
+		F56DCA891DDA79540037597E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56DCA881DDA79540037597E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2ADF0DA997BDD0F5D31CABB9 /* Pods-Apple Music Song Adder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple Music Song Adder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apple Music Song Adder/Pods-Apple Music Song Adder.debug.xcconfig"; sourceTree = "<group>"; };
+		4F97987E90113C8DE04406B1 /* Pods-Apple Music Song Adder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple Music Song Adder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apple Music Song Adder/Pods-Apple Music Song Adder.release.xcconfig"; sourceTree = "<group>"; };
 		F531FB5D1DD9ADFE009BB8A1 /* iTunesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesConnection.swift; sourceTree = "<group>"; };
 		F56398D41DD82C44003B40D9 /* Apple Music Song Adder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Music Song Adder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56398D71DD82C44003B40D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,12 @@
 		F56398DE1DD82C44003B40D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F56398E11DD82C44003B40D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F56398E31DD82C44003B40D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F56DCA821DDA73180037597E /* spotifyConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spotifyConnection.swift; sourceTree = "<group>"; };
+		F56DCA841DDA788A0037597E /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		F56DCA861DDA79460037597E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F56DCA881DDA79540037597E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F56DCA8A1DDA7BE10037597E /* Apple Music Song Adder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Apple Music Song Adder-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8994D55F07AA7A665361A5F /* Pods_Apple_Music_Song_Adder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apple_Music_Song_Adder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +44,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56DCA891DDA79540037597E /* SystemConfiguration.framework in Frameworks */,
+				F56DCA871DDA79460037597E /* AVFoundation.framework in Frameworks */,
+				67AE744A064E58373AD10C6C /* Pods_Apple_Music_Song_Adder.framework in Frameworks */,
+				F56DCA851DDA788A0037597E /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320266BB88E32F424A329E1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2ADF0DA997BDD0F5D31CABB9 /* Pods-Apple Music Song Adder.debug.xcconfig */,
+				4F97987E90113C8DE04406B1 /* Pods-Apple Music Song Adder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D8D039FD08F131E17250493 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCA881DDA79540037597E /* SystemConfiguration.framework */,
+				F56DCA861DDA79460037597E /* AVFoundation.framework */,
+				F56DCA841DDA788A0037597E /* SpotifyAuthentication.framework */,
+				F8994D55F07AA7A665361A5F /* Pods_Apple_Music_Song_Adder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F56398CB1DD82C43003B40D9 = {
 			isa = PBXGroup;
 			children = (
 				F56398D61DD82C44003B40D9 /* Apple Music Song Adder */,
 				F56398D51DD82C44003B40D9 /* Products */,
+				320266BB88E32F424A329E1B /* Pods */,
+				9D8D039FD08F131E17250493 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +98,12 @@
 				F56398D71DD82C44003B40D9 /* AppDelegate.swift */,
 				F56398D91DD82C44003B40D9 /* ViewController.swift */,
 				F531FB5D1DD9ADFE009BB8A1 /* iTunesConnection.swift */,
+				F56DCA821DDA73180037597E /* spotifyConnection.swift */,
 				F56398DB1DD82C44003B40D9 /* Main.storyboard */,
 				F56398DE1DD82C44003B40D9 /* Assets.xcassets */,
 				F56398E01DD82C44003B40D9 /* LaunchScreen.storyboard */,
 				F56398E31DD82C44003B40D9 /* Info.plist */,
+				F56DCA8A1DDA7BE10037597E /* Apple Music Song Adder-Bridging-Header.h */,
 			);
 			path = "Apple Music Song Adder";
 			sourceTree = "<group>";
@@ -74,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F56398E61DD82C44003B40D9 /* Build configuration list for PBXNativeTarget "Apple Music Song Adder" */;
 			buildPhases = (
+				5CC28E797C76CC6EC5FC07F5 /* [CP] Check Pods Manifest.lock */,
 				F56398D01DD82C43003B40D9 /* Sources */,
 				F56398D11DD82C43003B40D9 /* Frameworks */,
 				F56398D21DD82C43003B40D9 /* Resources */,
+				8CDFD514E23F16A7BF72BC3D /* [CP] Embed Pods Frameworks */,
+				4D721707E4C93D8A51C04B5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +144,7 @@
 					F56398D31DD82C43003B40D9 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = J973RFKB7T;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,11 +180,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D721707E4C93D8A51C04B5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Apple Music Song Adder/Pods-Apple Music Song Adder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC28E797C76CC6EC5FC07F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CDFD514E23F16A7BF72BC3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Apple Music Song Adder/Pods-Apple Music Song Adder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F56398D01DD82C43003B40D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56DCA831DDA73180037597E /* spotifyConnection.swift in Sources */,
 				F531FB5E1DD9ADFE009BB8A1 /* iTunesConnection.swift in Sources */,
 				F56398DA1DD82C44003B40D9 /* ViewController.swift in Sources */,
 				F56398D81DD82C44003B40D9 /* AppDelegate.swift in Sources */,
@@ -186,6 +280,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -235,6 +330,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -261,26 +357,55 @@
 		};
 		F56398E71DD82C44003B40D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ADF0DA997BDD0F5D31CABB9 /* Pods-Apple Music Song Adder.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J973RFKB7T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Apple Music Song Adder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joe.Apple-Music-Song-Adder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Apple Music Song Adder/Apple Music Song Adder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F56398E81DD82C44003B40D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F97987E90113C8DE04406B1 /* Pods-Apple Music Song Adder.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J973RFKB7T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Apple Music Song Adder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joe.Apple-Music-Song-Adder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Apple Music Song Adder/Apple Music Song Adder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
